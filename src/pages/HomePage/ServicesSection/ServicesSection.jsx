@@ -20,7 +20,7 @@ function ServicesSection() {
           {services.map((service) => (
             <div key={service.id} className="service-card">
               <div className="service-card-icon">
-                <img src={service.icon} alt={service.title} className="service-icon-img" />
+                <img src={service.icon} alt={service.title} className="service-icon-img" loading="lazy" />
               </div>
               <h3 className="service-card-title">{service.title}</h3>
               <p className="service-card-desc">{service.description}</p>

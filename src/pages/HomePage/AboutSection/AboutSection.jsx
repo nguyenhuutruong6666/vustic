@@ -17,7 +17,7 @@ function AboutSection() {
           </div>
           <div className="about-section-image">
             <div className="about-section-image-placeholder">
-              <img src={anhhop2} alt="anhhop2" className="anhhop2" />
+              <img src={anhhop2} alt="anhhop2" className="anhhop2" loading="lazy" />
             </div>
           </div>
         </div>

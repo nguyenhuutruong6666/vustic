@@ -9,7 +9,7 @@ function Footer() {
           {/* Left Column: Info */}
           <div className="footer-info">
             <div className="footer-logo-wrapper">
-              <img src="/logo.png" alt="VUSTIC JSC" className="footer-logo-img" />
+              <img src="/logo.png" alt="VUSTIC JSC" className="footer-logo-img" loading="lazy" />
             </div>
             
             <h3 className="footer-company-name">TRUNG TÂM GIAO THƯƠNG VIỆT MỸ</h3>
@@ -25,7 +25,7 @@ function Footer() {
           <div className="footer-membership">
             <p className="footer-membership-title">THÀNH VIÊN CỦA:</p>
             <div className="footer-membership-logos">
-              <img src={memImg} alt="Thành viên của VUSTIC" className="footer-mem-img" />
+              <img src={memImg} alt="Thành viên của VUSTIC" className="footer-mem-img" loading="lazy" />
             </div>
           </div>
         </div>

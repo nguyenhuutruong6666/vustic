@@ -1,3 +1,4 @@
+import { preload } from 'react-dom';
 import Container from '../../../components/common/Container/Container';
 import './HeroSection.scss';
 import heroBg from '../../../assets/images/anhhop.png';
@@ -5,6 +6,7 @@ import anh1 from '../../../assets/images/anh1.png';
 import anh2 from '../../../assets/images/anh2.png';
 
 function HeroSection() {
+  preload(heroBg, { as: 'image' });
   return (
     <section className="hero-section" style={{ backgroundImage: `url(${heroBg})` }}>
       <div className="hero-section-overlay"></div>
@@ -25,36 +27,36 @@ function HeroSection() {
             <span className="hero-section-partners-text">ĐỐI TÁC CỦA CHÚNG TÔI:</span>
             <div className="hero-section-partners-logos">
               <div className="marquee-content">
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
               </div>
               <div className="marquee-content">
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
               </div>
               <div className="marquee-content">
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
               </div>
               <div className="marquee-content">
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
-                <img src={anh1} alt="An Thái Café" className="partner-logo" />
-                <img src={anh2} alt="Khanest" className="partner-logo" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
+                <img src={anh1} alt="An Thái Café" className="partner-logo" loading="lazy" />
+                <img src={anh2} alt="Khanest" className="partner-logo" loading="lazy" />
               </div>
             </div>
           </div>

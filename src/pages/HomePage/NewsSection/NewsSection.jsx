@@ -19,7 +19,7 @@ function NewsSection() {
           {newsItems.map((item) => (
             <div key={item.id} className="news-card">
               <Link to={`/tin-tuc/${item.id}`} className="news-card-image">
-                <img src={item.image} alt={item.title} className="news-card-img" />
+                <img src={item.image} alt={item.title} className="news-card-img" loading="lazy" />
               </Link>
               <div className="news-card-content">
                 <span className="news-card-date">{item.date}</span>
