@@ -21,6 +21,7 @@
   color: #212121;
   margin-bottom: 32px;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .about-section-text {
@@ -83,5 +84,10 @@
 
   .about-section-content {
     padding-right: 0;
+  }
+
+  .about-section-title {
+    font-size: 28px;
+    margin-bottom: 24px;
   }
 }

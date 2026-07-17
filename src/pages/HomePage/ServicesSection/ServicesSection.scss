@@ -33,6 +33,7 @@
   color: #212121;
   margin-bottom: 16px;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .services-section-subtitle {
@@ -158,5 +159,11 @@
 @media (max-width: 768px) {
   .services-section-grid {
     grid-template-columns: 1fr;
+  }
+  .services-section-title {
+    font-size: 26px;
+  }
+  .service-card {
+    padding: 24px 20px;
   }
 }

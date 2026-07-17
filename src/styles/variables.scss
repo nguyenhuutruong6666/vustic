@@ -108,3 +108,8 @@
   --header-height: 90px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+  }
+}

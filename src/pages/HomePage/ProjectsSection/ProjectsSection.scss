@@ -16,6 +16,7 @@
   color: #212121;
   margin-bottom: 16px;
   text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .projects-section-subtitle {
@@ -116,5 +117,11 @@
 @media (max-width: 768px) {
   .projects-section-grid {
     grid-template-columns: 1fr;
+  }
+  .projects-section-title {
+    font-size: 26px;
+  }
+  .project-card-content {
+    padding: 20px 16px;
   }
 }
