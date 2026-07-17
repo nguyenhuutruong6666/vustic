@@ -204,6 +204,10 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+.header-mobile-contact {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .header-menu {
@@ -254,6 +258,28 @@
   .header-menu-link {
     font-size: 18px;
     justify-content: center;
+  }
+
+  .header-mobile-contact {
+    display: block;
+    margin-top: 32px;
+  }
+
+  .header-contact-btn-mobile {
+    background-color: #e53935;
+    color: #ffffff;
+    padding: 12px 36px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color var(--transition-fast);
+  }
+
+  .header-contact-btn-mobile:hover {
+    background-color: #d32f2f;
+    text-decoration: none;
   }
 }
 

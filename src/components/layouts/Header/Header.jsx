@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router';
-import { menuItems } from '../../../data/menuItems';
+import { menuItems } from '../../../services/menuItems';
 import Container from '../../common/Container/Container';
 import './Header.scss';
 
@@ -89,6 +89,11 @@ function Header() {
                   </li>
                 ))}
               </ul>
+              <div className="header-mobile-contact">
+                <Link to="/lien-he" className="header-contact-btn-mobile" onClick={closeMenu}>
+                  LIÊN HỆ
+                </Link>
+              </div>
             </nav>
 
             <div className="header-actions">
