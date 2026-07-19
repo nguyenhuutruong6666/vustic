@@ -1,5 +1,5 @@
 import Container from '../../../components/common/Container/Container';
-import contactbanner from '../../../assets/images/ContactBanner.png';
+import contactbanner from '../../../assets/images/ContactBanner.webp';
 import './ContactBanner.scss';
 import FindMore from '../../../components/common/FindMore/FindMore';
 

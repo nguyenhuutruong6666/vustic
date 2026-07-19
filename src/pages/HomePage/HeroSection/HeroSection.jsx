@@ -1,9 +1,9 @@
 import { preload } from 'react-dom';
 import Container from '../../../components/common/Container/Container';
 import './HeroSection.scss';
-import heroBg from '../../../assets/images/anhhop.png';
-import anh1 from '../../../assets/images/anh1.png';
-import anh2 from '../../../assets/images/anh2.png';
+import heroBg from '../../../assets/images/anhhop.webp';
+import anh1 from '../../../assets/images/anh1.webp';
+import anh2 from '../../../assets/images/anh2.webp';
 
 function HeroSection() {
   preload(heroBg, { as: 'image' });

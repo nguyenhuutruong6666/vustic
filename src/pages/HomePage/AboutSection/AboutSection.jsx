@@ -1,6 +1,6 @@
 import Container from '../../../components/common/Container/Container';
 import './AboutSection.scss';
-import anhhop2 from '../../../assets/images/anhhop2.jpg';
+import anhhop2 from '../../../assets/images/anhhop2.webp';
 import FindMore from '../../../components/common/FindMore/FindMore';
 
 function AboutSection() {
