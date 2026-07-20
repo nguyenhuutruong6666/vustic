@@ -1,5 +1,4 @@
 import Container from '../../components/common/Container/Container';
-import SectionTitle from '../../components/common/SectionTitle/SectionTitle';
 import './ContactPage.scss';
 
 function ContactPage() {
@@ -10,11 +9,6 @@ function ContactPage() {
       </div>
       <section className="section">
         <Container>
-          <SectionTitle
-            subtitle="Liên hệ"
-            title="Liên hệ với chúng tôi"
-            description="Hãy để lại thông tin, chúng tôi sẽ liên hệ lại sớm nhất."
-          />
           <div className="contact-page-content">
             <p>Form liên hệ sẽ được cập nhật.</p>
           </div>

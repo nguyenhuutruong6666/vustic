@@ -1,0 +1,143 @@
+.organization-chart {
+  background-color: #f8f9fa;
+  padding: 30px 0;
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.org-intro-card {
+  background-color: #dc2626;
+  color: var(--color-white);
+  padding: 40px 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-intro-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.org-intro-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+}
+
+.org-member-card {
+  background-color: var(--color-white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.org-member-image {
+  height: 280px;
+  width: 100%;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+.org-member-content {
+  padding: 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-member-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.org-member-role {
+  font-size: 13px;
+  color: #dc2626;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.org-member-exp {
+  flex-grow: 1;
+  
+  p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  ul {
+    padding-left: 16px;
+    margin-bottom: 24px;
+    
+    li {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.6;
+      list-style-type: disc;
+    }
+  }
+}
+
+/* Override FindMore button styles for member cards */
+.org-member-btn.find-more-btn {
+  font-size: 12px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #333;
+  text-decoration: underline;
+  margin-top: auto;
+  align-self: flex-start;
+  justify-content: flex-start;
+  font-weight: 600;
+  
+  svg {
+    display: none !important;
+  }
+  
+  &:hover {
+    background: none;
+    text-decoration: underline;
+    color: #dc2626;
+    transform: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .org-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .org-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-member-image {
+    height: auto;
+    aspect-ratio: 1;
+  }
+}

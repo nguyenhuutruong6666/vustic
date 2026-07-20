@@ -18,7 +18,7 @@ function Footer() {
               <p>Trụ sở chính: 1102 tầng 11, tòa nhà Giảng Võ lakeview, D10 Giảng Võ, Phường<br/>Giảng Võ, Quận Ba Đình, Hà Nội, Việt Nam</p>
               <p>VP giao dịch: 105A Phố Quán Thánh, Phường Quán Thánh, Quận Ba Đình, Thành<br/>phố Hà Nội, Việt Nam</p>
               <p>Điện thoại: +84 865 683 662, +84 905 436 666</p>
-              <p>Gmail: VUSTICJSC@gmaill.com</p>
+              <p>Gmail: vusticjsc@gmaill.com</p>
             </div>
           </div>
 

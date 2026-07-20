@@ -1,0 +1,144 @@
+.vision-mission {
+  display: flex;
+  flex-direction: column;
+}
+
+.vm-row {
+  padding: 60px 0;
+  color: var(--color-white);
+}
+
+.vm-blue {
+  background-color: #1e3a8a;
+}
+
+.vm-dark-blue {
+  background-color: #172554;
+}
+
+.vm-red {
+  background-color: #dc2626;
+}
+
+.vm-content {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.vm-title-blur{
+  color: white;
+}
+
+.vm-number {
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-heading);
+  font-style: italic;
+  position: relative;
+  letter-spacing: -2px;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background-color: rgba(255,255,255,0.4);
+    transform: rotate(-60deg);
+    border-radius: 4px;
+    display: none;
+  }
+}
+
+.vm-title h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 70px;
+  padding-right: 70px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+
+  .vm-title-blur {
+    display: inline;
+    font-weight: 700;
+    color: var(--color-white);
+    font-size: 28px;
+    margin-right: 8px;
+  }
+}
+
+/* Animations */
+.opacity-0 {
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.vm-desc p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+
+  strong {
+    font-weight: 700;
+    color: var(--color-white);
+  }
+}
+
+@media (max-width: 992px) {
+  .vm-content {
+    grid-template-columns: 120px 1fr;
+    gap: 30px;
+  }
+  
+  .vm-number {
+    font-size: 100px;
+  }
+  
+  .vm-desc {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .vm-row {
+    padding: 40px 0;
+  }
+  
+  .vm-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .vm-title h3 .vm-title-blur {
+    display: inline;
+    margin-right: 8px;
+    font-size: 24px;
+  }
+  
+  .vm-desc p {
+    text-align: center;
+  }
+}

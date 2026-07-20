@@ -5,7 +5,6 @@ import OperationMapSection from './OperationMapSection/OperationMapSection';
 import ProjectsSection from './ProjectsSection/ProjectsSection';
 import NewsSection from './NewsSection/NewsSection';
 import ContactBanner from './ContactBanner/ContactBanner';
-import './HomePage.scss';
 
 function HomePage() {
   return (

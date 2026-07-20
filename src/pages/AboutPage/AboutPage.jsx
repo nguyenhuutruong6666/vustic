@@ -1,13 +1,20 @@
-import Container from '../../components/common/Container/Container';
-import './AboutPage.scss';
+import AboutHero from './AboutHero/AboutHero';
+import VisionMission from './VisionMission/VisionMission';
+import CoreValues from './CoreValues/CoreValues';
+import StrategicRole from './StrategicRole/StrategicRole';
+import OrganizationChart from './OrganizationChart/OrganizationChart';
+import ContactBanner from '../HomePage/ContactBanner/ContactBanner';
 
 function AboutPage() {
   return (
-    <section className="section text-center" style={{ marginTop: '100px', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-      <Container>
-        <h2>Nội dung đang cập nhật</h2>
-      </Container>
-    </section>
+    <div className="about-page">
+      <AboutHero />
+      <VisionMission />
+      <CoreValues />
+      <StrategicRole />
+      <OrganizationChart />
+      <ContactBanner />
+    </div>
   );
 }
 
