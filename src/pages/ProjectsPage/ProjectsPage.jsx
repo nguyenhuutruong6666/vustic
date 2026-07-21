@@ -1,13 +1,14 @@
-import Container from '../../components/common/Container/Container';
-import './ProjectsPage.scss';
+import ProjectHero from './ProjectHero/ProjectHero';
+import ProjectsSection from './ProjectsSection/ProjectsSection';
+import ContactBanner from './ContactBanner/ContactBanner';
 
 function ProjectsPage() {
   return (
-    <section className="section text-center" style={{ marginTop: '100px', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-      <Container>
-        <h2>Nội dung đang cập nhật</h2>
-      </Container>
-    </section>
+    <div className="project-page">
+      <ProjectHero />
+      <ProjectsSection />
+      <ContactBanner />
+    </div>
   );
 }
 
