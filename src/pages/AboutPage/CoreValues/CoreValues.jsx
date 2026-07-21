@@ -1,12 +1,34 @@
+import { useEffect, useRef, useState } from 'react';
 import Container from '../../../components/common/Container/Container';
 import './CoreValues.scss';
 
 function CoreValues() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="core-values-section section">
+    <section className="core-values-section section" ref={sectionRef}>
       <Container>
         <div className="core-values-grid">
-          <div className="cv-card">
+          <div className={`cv-card ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <div className="cv-icon cv-icon-red">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -19,7 +41,7 @@ function CoreValues() {
             </div>
           </div>
           
-          <div className="cv-card">
+          <div className={`cv-card ${isVisible ? 'animate-slide-in-up' : 'opacity-0'}`}>
             <div className="cv-icon cv-icon-red">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
@@ -32,7 +54,7 @@ function CoreValues() {
             </div>
           </div>
           
-          <div className="cv-card">
+          <div className={`cv-card ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}>
             <div className="cv-icon cv-icon-red">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>

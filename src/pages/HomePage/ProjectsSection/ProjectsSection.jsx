@@ -1,20 +1,42 @@
+import { useEffect, useRef, useState } from 'react';
 import Container from '../../../components/common/Container/Container';
 import './ProjectsSection.scss';
 import { projects } from '../../../services/ProjectsSection';
 import FindMore from '../../../components/common/FindMore/FindMore';
 
 function ProjectsSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="projects-section section">
+    <section className="projects-section section" ref={sectionRef}>
       <Container>
-        <div className="projects-section-header">
+        <div className={`projects-section-header ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
           <h2 className="projects-section-title">DỰ ÁN NỔI BẬT</h2>
           <p className="projects-section-subtitle">
             Công nghiệp hóa, hiện đại hóa và mang sản phẩm hàng hóa, dịch vụ xuất xứ Việt Nam tiếp cận thị trường Mỹ
           </p>
         </div>
 
-        <div className="projects-section-grid">
+        <div className={`projects-section-grid ${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`}>
           {projects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-card-image">
