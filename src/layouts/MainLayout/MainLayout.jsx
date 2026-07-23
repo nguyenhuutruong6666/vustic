@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router';
 import Header from '../../components/layouts/Header/Header';
 import Footer from '../../components/layouts/Footer/Footer';
+import BackToTop from '../../components/common/BackToTop/BackToTop';
 import './MainLayout.scss';
 
 function MainLayout() {
@@ -11,6 +12,7 @@ function MainLayout() {
         <Outlet />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }
