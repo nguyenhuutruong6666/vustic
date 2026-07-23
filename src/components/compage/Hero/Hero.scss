@@ -138,6 +138,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 400px;
+    margin-top: 72px; /* header mobile thường thấp hơn desktop */
 
     &--fullscreen {
       min-height: 600px;
@@ -152,9 +153,28 @@
     font-size: 16px;
   }
 
+  .hero-content {
+    /* Thanh đối tác trên mobile wrap 2 dòng nên cao ~110px */
+    padding-bottom: 120px;
+  }
+
   .hero-partners-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 8px;
+  }
+
+  .hero-partners-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+
+  .hero-content {
+    padding-bottom: 130px;
   }
 }
