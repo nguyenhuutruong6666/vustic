@@ -1,11 +1,11 @@
-import ProjectHero from './ProjectHero/ProjectHero';
+import Hero from '../../components/compage/Hero/Hero';
 import ProjectsSection from './ProjectsSection/ProjectsSection';
-import ContactBanner from './ContactBanner/ContactBanner';
+import ContactBanner from '../../components/compage/ContactBanner/ContactBanner';
 
 function ProjectsPage() {
   return (
     <div className="project-page">
-      <ProjectHero />
+      <Hero title="DỰ ÁN" />
       <ProjectsSection />
       <ContactBanner />
     </div>

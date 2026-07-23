@@ -1,11 +1,11 @@
-import NewHero from './NewHero/NewHero';
+import Hero from '../../components/compage/Hero/Hero';
 import NewsSection from './NewsSection/NewsSection';
-import ContactBanner from './ContactBanner/ContactBanner';
+import ContactBanner from '../../components/compage/ContactBanner/ContactBanner';
 
 function NewsPage() {
   return (
     <div className="news-page">
-      <NewHero />
+      <Hero title="TIN TỨC" />
       <NewsSection />
       <ContactBanner />
     </div>

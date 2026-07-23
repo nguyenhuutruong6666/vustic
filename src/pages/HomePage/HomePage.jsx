@@ -1,15 +1,17 @@
-import HeroSection from './HeroSection/HeroSection';
+import Hero from '../../components/compage/Hero/Hero';
+
 import AboutSection from './AboutSection/AboutSection';
 import ServicesSection from './ServicesSection/ServicesSection';
 import OperationMapSection from './OperationMapSection/OperationMapSection';
 import ProjectsSection from './ProjectsSection/ProjectsSection';
 import NewsSection from './NewsSection/NewsSection';
-import ContactBanner from './ContactBanner/ContactBanner';
+import ContactBanner from '../../components/compage/ContactBanner/ContactBanner';
 
 function HomePage() {
   return (
     <div className="home-page">
-      <HeroSection />
+      <Hero title="CẦU NỐI THỊNH VƯỢNG VIỆT - MỸ" fullscreen />
+
       <AboutSection />
       <ServicesSection />
       <OperationMapSection />
