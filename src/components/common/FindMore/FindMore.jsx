@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 import './FindMore.scss';
 
 function FindMore({ href, className }) {
@@ -24,9 +25,9 @@ function FindMore({ href, className }) {
   }, []);
 
   return (
-    <a 
+    <Link 
       ref={ref}
-      href={href} 
+      to={href} 
       className={`find-more-btn ${className || ''} ${isVisible ? 'animate-pop-in' : 'opacity-0'}`}
     >
       Tìm hiểu thêm
@@ -34,7 +35,7 @@ function FindMore({ href, className }) {
         <line x1="5" y1="12" x2="19" y2="12"></line>
         <polyline points="12 5 19 12 12 19"></polyline>
       </svg>
-    </a>
+    </Link>
   );
 }
 

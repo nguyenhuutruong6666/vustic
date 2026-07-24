@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router';
 import './ViewAll.scss';
 
 function ViewAll({ href, className }) {
@@ -24,13 +25,13 @@ function ViewAll({ href, className }) {
   }, []);
 
   return (
-    <a 
+    <Link 
       ref={ref}
-      href={href} 
+      to={href} 
       className={`view-all-btn ${className || ''} ${isVisible ? 'animate-pop-in' : 'opacity-0'}`}
     >
       Xem tất cả
-    </a>
+    </Link>
   );
 }
 

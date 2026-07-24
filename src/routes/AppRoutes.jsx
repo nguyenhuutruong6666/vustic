@@ -5,7 +5,9 @@ import HomePage from '../pages/HomePage/HomePage';
 import AboutPage from '../pages/AboutPage/AboutPage';
 import PartnersPage from '../pages/PartnersPage/PartnersPage';
 import ProjectsPage from '../pages/ProjectsPage/ProjectsPage';
+import ProjectDetailPage from '../pages/ProjectDetailPage/ProjectDetailPage';
 import NewsPage from '../pages/NewsPage/NewsPage';
+import NewsDetailPage from '../pages/NewsDetailPage/NewsDetailPage';
 import GalleryPage from '../pages/GalleryPage/GalleryPage';
 import ContactPage from '../pages/ContactPage/ContactPage';
 
@@ -19,7 +21,9 @@ function AppRoutes() {
           <Route path="/gioi-thieu" element={<AboutPage />} />
           <Route path="/doi-tac" element={<PartnersPage />} />
           <Route path="/du-an" element={<ProjectsPage />} />
+          <Route path="/du-an/:id" element={<ProjectDetailPage />} />
           <Route path="/tin-tuc" element={<NewsPage />} />
+          <Route path="/tin-tuc/:id" element={<NewsDetailPage />} />
           <Route path="/hinh-anh" element={<GalleryPage />} />
           <Route path="/lien-he" element={<ContactPage />} />
         </Route>

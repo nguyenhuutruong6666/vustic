@@ -46,13 +46,13 @@ function ServicesSection() {
               </div>
               <h3 className="service-card-title">{service.title}</h3>
               <p className="service-card-desc">{service.description}</p>
-              <FindMore href="#" className="service-card-btn" />
+              <FindMore href="/gioi-thieu" className="service-card-btn" />
             </div>
           ))}
         </div>
         
         <div className="services-section-footer">
-          <ViewAll href="#" className="services-section-viewall" />
+          <ViewAll href="/gioi-thieu" className="services-section-viewall" />
         </div>
       </Container>
     </section>
