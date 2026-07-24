@@ -24,7 +24,6 @@ function NewsDetail({ newsItem }) {
           
           <div className="news-detail-content">
             <p className="news-desc">{newsItem.description}</p>
-            {/* Nếu sau này có trường content dài hơn, ta sẽ render ở đây */}
           </div>
         </div>
       </Container>
