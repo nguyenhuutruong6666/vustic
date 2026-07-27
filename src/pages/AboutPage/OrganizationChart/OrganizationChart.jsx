@@ -31,7 +31,7 @@ function OrganizationChart() {
                     ))}
                   </ul>
                 </div>
-                <FindMore href="#" className="org-member-btn" />
+                <FindMore href={`/thanh-vien/${member.id}`} className="org-member-btn" />
               </div>
             </div>
           ))}

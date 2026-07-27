@@ -10,7 +10,7 @@ import NewsPage from '../pages/NewsPage/NewsPage';
 import NewsDetailPage from '../pages/NewsDetailPage/NewsDetailPage';
 import GalleryPage from '../pages/GalleryPage/GalleryPage';
 import ContactPage from '../pages/ContactPage/ContactPage';
-
+import MemberDetailPage from '../pages/MemberDetailPage/MemberDetailPage';
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -26,6 +26,7 @@ function AppRoutes() {
           <Route path="/tin-tuc/:id" element={<NewsDetailPage />} />
           <Route path="/hinh-anh" element={<GalleryPage />} />
           <Route path="/lien-he" element={<ContactPage />} />
+          <Route path="/thanh-vien/:id" element={<MemberDetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
