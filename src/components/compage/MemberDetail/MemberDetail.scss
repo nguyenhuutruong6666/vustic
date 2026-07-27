@@ -1,13 +1,53 @@
 @import '../../../styles/variables.scss';
 
+.detail-breadcrumb {
+  background-color: var(--color-gray-pale);
+  padding: 16px 0;
+  margin-top: var(--header-height);
+  
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    li {
+      display: flex;
+      align-items: center;
+      font-size: var(--font-size-link);
+      font-weight: 500;
+      color: var(--color-gray-medium);
+      
+      a {
+        color: var(--color-gray-medium);
+        transition: color var(--transition-fast);
+        
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+      
+      &.active {
+        color: var(--color-primary);
+        font-weight: 600;
+      }
+      
+      .separator {
+        margin: 0 10px;
+        color: var(--color-gray-light);
+      }
+    }
+  }
+}
+
 .member-detail {
-  padding-top: 120px;
+  padding-top: var(--header-height);
   padding-bottom: 80px;
 
   &-wrapper {
     display: flex;
     gap: 60px;
     align-items: flex-start;
+    margin-top: 30px;
     
     @media (max-width: 992px) {
       gap: 40px;
@@ -16,6 +56,7 @@
     @media (max-width: 768px) {
       flex-direction: column;
       gap: 30px;
+      margin-top: 30px;
     }
   }
 
@@ -25,23 +66,74 @@
     @media (max-width: 768px) {
       flex: 1;
       width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
     }
   }
 
   &-image {
+    position: relative;
     width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    
+    .member-decor-box {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid var(--color-accent);
+      border-radius: 8px;
+      z-index: -1;
+    }
 
     img {
       width: 100%;
       height: auto;
       display: block;
-      transition: transform 0.3s ease;
+      border-radius: 8px;
+      box-shadow: var(--shadow-l2);
+      transition: transform var(--transition-slow);
+      background-color: var(--color-gray-pale);
 
       &:hover {
-        transform: scale(1.02);
+        transform: translateY(-5px);
+      }
+    }
+  }
+  
+  .member-contact-info {
+    background-color: var(--color-gray-pale);
+    padding: 24px;
+    border-radius: 8px;
+    
+    h4 {
+      font-size: 16px;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-gray-dark);
+      margin-bottom: 12px;
+      font-size: 14px;
+      transition: color var(--transition-fast);
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &:hover {
+        color: var(--color-accent);
+      }
+      
+      svg {
+        color: var(--color-accent);
       }
     }
   }
@@ -50,53 +142,115 @@
     flex: 1;
   }
 
-  &-role {
-    display: block;
-    color: #888;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-    font-weight: 500;
-  }
+  .member-header {
+    margin-bottom: 40px;
+    
+    .member-detail-role {
+      display: inline-block;
+      color: var(--color-white);
+      background-color: var(--color-accent);
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
 
-  &-name {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.2;
+    .member-detail-name {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      margin-bottom: 20px;
+      line-height: 1.2;
+      
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+    
+    .title-separator {
+      width: 60px;
+      height: 4px;
+      background-color: var(--color-accent);
+      border-radius: 2px;
+    }
   }
 
   &-info {
     h4 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 16px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 24px;
     }
 
-    ul {
+    .experience-list {
       list-style: none;
       padding: 0;
       margin: 0;
 
       li {
-        position: relative;
-        padding-left: 20px;
-        margin-bottom: 12px;
-        color: #666;
-        line-height: 1.6;
-        font-size: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 20px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
 
-        &::before {
-          content: '•';
-          position: absolute;
-          left: 0;
-          color: #333;
-          font-weight: bold;
+        .exp-icon {
+          flex-shrink: 0;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: rgba(216, 34, 32, 0.1);
+          color: var(--color-accent);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2px;
+        }
+        
+        p {
+          color: var(--text-body);
+          line-height: 1.7;
+          font-size: 16px;
+          margin: 0;
         }
       }
+    }
+  }
+  
+  &-quote {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--color-primary-dark);
+    border-radius: 8px;
+    position: relative;
+    
+    .quote-icon {
+      color: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+    }
+    
+    .quote-text {
+      position: relative;
+      z-index: 1;
+      color: var(--color-white);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.8;
+      font-weight: 300;
+      margin: 0;
+      padding-left: 20px;
+      border-left: 3px solid var(--color-accent);
     }
   }
 }
