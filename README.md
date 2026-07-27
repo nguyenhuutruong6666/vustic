@@ -2,7 +2,7 @@
 
 Giao diện người dùng được thiết kế chuyên nghiệp, hiện đại với trải nghiệm mượt mà, kết hợp cùng các hiệu ứng chuyển động (animations) tinh tế nhằm mang lại ấn tượng tốt nhất cho khách hàng và đối tác.
 
-## 🚀 Công Nghệ Sử Dụng (Tech Stack)
+## Công Nghệ Sử Dụng (Tech Stack)
 
 Dự án được xây dựng dựa trên các công nghệ web hiện đại mới nhất:
 
@@ -21,7 +21,7 @@ Dự án được xây dựng dựa trên các công nghệ web hiện đại m�
   - Buttons (`FindMore`, `ViewAll`, `BackToTop`).
   - Hệ thống `Search` và `Pagination` (Phân trang) đầy đủ chức năng.
   - Lightbox xem ảnh toàn màn hình.
-- 📱 **Mobile Menu:** Navigation mượt mà tích hợp hiệu ứng chuyển đổi khi cuộn trang (Scrolled Header).
+- **Mobile Menu:** Navigation mượt mà tích hợp hiệu ứng chuyển đổi khi cuộn trang (Scrolled Header).
 
 ## Cấu Trúc Trang Web (Sitemap)
 
