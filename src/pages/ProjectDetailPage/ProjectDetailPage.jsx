@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import ProjectDetail from '../../components/compage/ProjectDetail/ProjectDetail';
 import { projects } from '../../services/ProjectsSection';
+import ContactBanner from '../../components/compage/ContactBanner/ContactBanner';
 
 function ProjectDetailPage() {
   const { id } = useParams();
@@ -17,6 +18,7 @@ function ProjectDetailPage() {
   return (
     <main className="project-detail-page">
       <ProjectDetail project={project} />
+      <ContactBanner />
     </main>
   );
 }

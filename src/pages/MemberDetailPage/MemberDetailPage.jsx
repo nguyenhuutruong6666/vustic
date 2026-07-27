@@ -1,6 +1,7 @@
 import { useParams } from 'react-router';
 import { members } from '../../services/OrganizationChart';
 import MemberDetail from '../../components/compage/MemberDetail/MemberDetail';
+import ContactBanner from '../../components/compage/ContactBanner/ContactBanner';
 
 function MemberDetailPage() {
   const { id } = useParams();
@@ -17,6 +18,7 @@ function MemberDetailPage() {
   return (
     <main className="member-detail-page">
       <MemberDetail member={member} />
+      <ContactBanner />
     </main>
   );
 }
