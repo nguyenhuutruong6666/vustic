@@ -10,8 +10,7 @@ import ContactBanner from '../../components/compage/ContactBanner/ContactBanner'
 function HomePage() {
   return (
     <div className="home-page">
-      <Hero title="CẦU NỐI THỊNH VƯỢNG VIỆT - MỸ" fullscreen />
-
+      <Hero title="CẦU NỐI THỊNH VƯỢNG VIỆT - MỸ" />
       <AboutSection />
       <ServicesSection />
       <OperationMapSection />
