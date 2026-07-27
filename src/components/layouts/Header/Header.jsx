@@ -7,6 +7,7 @@ import './Header.scss';
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeMegaTab, setActiveMegaTab] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,11 +82,74 @@ function Header() {
                     >
                       {item.label}
                       {item.label === 'Giới thiệu' && (
-                        <svg className="menu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                          {/* <path d="M7 10l5 5 5-5z" /> */}
+                        <svg className="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       )}
                     </NavLink>
+                    {item.label === 'Giới thiệu' && (
+                      <div className="mega-menu">
+                        <div className="mega-menu-inner">
+                          <div className="mega-menu-sidebar">
+                            <ul>
+                              <li className={activeMegaTab === 1 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(1)}>Giới thiệu 1</li>
+                              <li className={activeMegaTab === 2 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(2)}>Giới thiệu 2</li>
+                              <li className={activeMegaTab === 3 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(3)}>Giới thiệu 3</li>
+                            </ul>
+                          </div>
+                          <div className="mega-menu-content">
+                            {activeMegaTab === 1 && (
+                              <div className="mega-menu-grid">
+                                <div className="mega-menu-col">
+                                  <h4>Giới thiệu chi tiết 1</h4>
+                                  <ul>
+                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
+                                  </ul>
+                                </div>
+                                <div className="mega-menu-col">
+                                  <h4>Giới thiệu chi tiết 2</h4>
+                                  <ul>
+                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
+                                  </ul>
+                                </div>
+                                <div className="mega-menu-col">
+                                  <h4>Giới thiệu chi tiết 3</h4>
+                                  <ul>
+                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
+                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            )}
+                            {activeMegaTab === 2 && (
+                              <div className="mega-menu-grid">
+                                <div className="mega-menu-col">
+                                  <h4>Nội dung Giới thiệu 2</h4>
+                                  <ul>
+                                    <li><Link to="#">Chi tiết 2A</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            )}
+                            {activeMegaTab === 3 && (
+                              <div className="mega-menu-grid">
+                                <div className="mega-menu-col">
+                                  <h4>Nội dung Giới thiệu 3</h4>
+                                  <ul>
+                                    <li><Link to="#">Chi tiết 3A</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>

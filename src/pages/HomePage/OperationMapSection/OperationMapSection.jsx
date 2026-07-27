@@ -4,7 +4,7 @@ import { data } from '../../../services/OperationMapSection';
 
 function OperationMapSection() {
   return (
-    <section className="operation-map-section section">
+    <section className="operation-map-section">
       <Container>
         <div className="operation-map-grid">
           <div className="operation-map-stats">

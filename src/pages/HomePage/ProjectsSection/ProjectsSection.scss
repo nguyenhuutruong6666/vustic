@@ -1,6 +1,6 @@
-.projects-section {
+.projects-sectionA {
   background: #f8f9fa;
-  padding: 50px 0;
+  padding: 40px 0;
   clip-path: inset(0);
 }
 
@@ -37,6 +37,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin-bottom: 10px;
 }
 
 .project-card {
@@ -154,7 +155,7 @@
 }
 
 @media (max-width: 768px) {
-  .projects-section {
+  .projects-sectionA {
     clip-path: none;
     overflow: hidden;
   }

@@ -29,7 +29,7 @@ function ServicesSection() {
   }, []);
 
   return (
-    <section className="services-section section" id="services" ref={sectionRef}>
+    <section className="services-section" id="services" ref={sectionRef}>
       <div className="services-section-bg" style={{ backgroundImage: `url(${anhcau})` }}></div>
       <Container>
         <div className={`services-section-header ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>

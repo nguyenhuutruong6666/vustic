@@ -28,7 +28,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.news-section .cn-pagination {
+  // margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 .news-card {

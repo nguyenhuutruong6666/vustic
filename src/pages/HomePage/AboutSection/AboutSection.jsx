@@ -27,7 +27,7 @@ function AboutSection() {
   }, []);
 
   return (
-    <section className="about-section section" id="about" ref={sectionRef}>
+    <section className="about-section" id="about" ref={sectionRef}>
       <Container>
         <div className="about-section-grid">
           <div className={`about-section-content ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>

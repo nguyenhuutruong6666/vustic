@@ -27,7 +27,7 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <section className="projects-section section" ref={sectionRef}>
+    <section className="projects-sectionA" ref={sectionRef}>
       <Container>
         <div className={`projects-section-header${isVisible ? ' ps-header--visible' : ''}`}>
           <h2 className="projects-section-title">DỰ ÁN NỔI BẬT</h2>

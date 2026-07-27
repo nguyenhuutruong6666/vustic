@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 
 function NewsSection() {
   return (
-    <section className="news-section section">
+    <section className="news-sectionA">
       <Container>
         <div className="news-section-header">
           <h2 className="news-section-title">TIN TỨC & SỰ KIỆN</h2>
