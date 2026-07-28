@@ -9,6 +9,11 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMegaTab, setActiveMegaTab] = useState(1);
   const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
+  const [mobileSubmenuState, setMobileSubmenuState] = useState({
+    about1: false,
+    about2: false,
+    about3: false,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,9 +167,65 @@ function Header() {
                         {/* Mobile Submenu Accordion */}
                         <div className={`mobile-submenu ${isMobileAboutOpen ? 'open' : ''}`}>
                           <ul>
-                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 1</Link></li>
-                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 2</Link></li>
-                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 3</Link></li>
+                            {/* Giới thiệu 1 */}
+                            <li className="mobile-submenu-item">
+                              <div 
+                                className="mobile-submenu-link" 
+                                onClick={(e) => { e.preventDefault(); setMobileSubmenuState(p => ({...p, about1: !p.about1})); }}
+                              >
+                                Giới thiệu chi tiết 1
+                                <svg className={`menu-arrow ${mobileSubmenuState.about1 ? 'open' : ''}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                              </div>
+                              <div className={`mobile-sub-submenu ${mobileSubmenuState.about1 ? 'open' : ''}`}>
+                                <ul>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1A</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1B</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1C</Link></li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            {/* Giới thiệu 2 */}
+                            <li className="mobile-submenu-item">
+                              <div 
+                                className="mobile-submenu-link" 
+                                onClick={(e) => { e.preventDefault(); setMobileSubmenuState(p => ({...p, about2: !p.about2})); }}
+                              >
+                                Giới thiệu chi tiết 2
+                                <svg className={`menu-arrow ${mobileSubmenuState.about2 ? 'open' : ''}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                              </div>
+                              <div className={`mobile-sub-submenu ${mobileSubmenuState.about2 ? 'open' : ''}`}>
+                                <ul>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2A</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2B</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2C</Link></li>
+                                </ul>
+                              </div>
+                            </li>
+
+                            {/* Giới thiệu 3 */}
+                            <li className="mobile-submenu-item">
+                              <div 
+                                className="mobile-submenu-link" 
+                                onClick={(e) => { e.preventDefault(); setMobileSubmenuState(p => ({...p, about3: !p.about3})); }}
+                              >
+                                Giới thiệu chi tiết 3
+                                <svg className={`menu-arrow ${mobileSubmenuState.about3 ? 'open' : ''}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                              </div>
+                              <div className={`mobile-sub-submenu ${mobileSubmenuState.about3 ? 'open' : ''}`}>
+                                <ul>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3A</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3B</Link></li>
+                                  <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3C</Link></li>
+                                </ul>
+                              </div>
+                            </li>
                           </ul>
                         </div>
                       </>
