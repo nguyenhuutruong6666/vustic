@@ -6,7 +6,7 @@
   align-items: center;
   background-color: var(--color-primary-dark);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   overflow: hidden;
   margin-top: 108px;
@@ -138,7 +138,7 @@
 @media (max-width: 768px) {
   .hero {
     min-height: 400px;
-    margin-top: 72px; /* header mobile thường thấp hơn desktop */
+    margin-top: 88px;
 
     &--fullscreen {
       min-height: 600px;
