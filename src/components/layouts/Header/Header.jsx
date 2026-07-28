@@ -8,6 +8,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMegaTab, setActiveMegaTab] = useState(1);
+  const [isMobileAboutOpen, setIsMobileAboutOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,77 +79,95 @@ function Header() {
                       className={({ isActive }) =>
                         `header-menu-link ${isActive ? 'header-menu-link-active' : ''}`
                       }
-                      onClick={closeMenu}
+                      onClick={(e) => {
+                        if (item.label === 'Giới thiệu' && window.innerWidth <= 768) {
+                          e.preventDefault();
+                          setIsMobileAboutOpen(!isMobileAboutOpen);
+                        } else {
+                          closeMenu();
+                        }
+                      }}
                     >
                       {item.label}
                       {item.label === 'Giới thiệu' && (
-                        <svg className="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <svg className={`menu-arrow ${isMobileAboutOpen ? 'open' : ''}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                           <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       )}
                     </NavLink>
                     {item.label === 'Giới thiệu' && (
-                      <div className="mega-menu">
-                        <div className="mega-menu-inner">
-                          <div className="mega-menu-sidebar">
-                            <ul>
-                              <li className={activeMegaTab === 1 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(1)}>Giới thiệu 1</li>
-                              <li className={activeMegaTab === 2 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(2)}>Giới thiệu 2</li>
-                              <li className={activeMegaTab === 3 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(3)}>Giới thiệu 3</li>
-                            </ul>
-                          </div>
-                          <div className="mega-menu-content">
-                            {activeMegaTab === 1 && (
-                              <div className="mega-menu-grid">
-                                <div className="mega-menu-col">
-                                  <h4>Giới thiệu chi tiết 1</h4>
-                                  <ul>
-                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
-                                  </ul>
+                      <>
+                        <div className="mega-menu">
+                          <div className="mega-menu-inner">
+                            <div className="mega-menu-sidebar">
+                              <ul>
+                                <li className={activeMegaTab === 1 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(1)}>Giới thiệu 1</li>
+                                <li className={activeMegaTab === 2 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(2)}>Giới thiệu 2</li>
+                                <li className={activeMegaTab === 3 ? 'active' : ''} onMouseEnter={() => setActiveMegaTab(3)}>Giới thiệu 3</li>
+                              </ul>
+                            </div>
+                            <div className="mega-menu-content">
+                              {activeMegaTab === 1 && (
+                                <div className="mega-menu-grid">
+                                  <div className="mega-menu-col">
+                                    <h4>Giới thiệu chi tiết 1</h4>
+                                    <ul>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1A</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1B</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 1C</Link></li>
+                                    </ul>
+                                  </div>
+                                  <div className="mega-menu-col">
+                                    <h4>Giới thiệu chi tiết 2</h4>
+                                    <ul>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2A</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2B</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 2C</Link></li>
+                                    </ul>
+                                  </div>
+                                  <div className="mega-menu-col">
+                                    <h4>Giới thiệu chi tiết 3</h4>
+                                    <ul>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3A</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3B</Link></li>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu chi tiết 3C</Link></li>
+                                    </ul>
+                                  </div>
                                 </div>
-                                <div className="mega-menu-col">
-                                  <h4>Giới thiệu chi tiết 2</h4>
-                                  <ul>
-                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
-                                  </ul>
+                              )}
+                              {activeMegaTab === 2 && (
+                                <div className="mega-menu-grid">
+                                  <div className="mega-menu-col">
+                                    <h4>Nội dung Giới thiệu 2</h4>
+                                    <ul>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Chi tiết 2A</Link></li>
+                                    </ul>
+                                  </div>
                                 </div>
-                                <div className="mega-menu-col">
-                                  <h4>Giới thiệu chi tiết 3</h4>
-                                  <ul>
-                                    <li><Link to="#">Giới thiệu chi tiết A</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết B</Link></li>
-                                    <li><Link to="#">Giới thiệu chi tiết C</Link></li>
-                                  </ul>
+                              )}
+                              {activeMegaTab === 3 && (
+                                <div className="mega-menu-grid">
+                                  <div className="mega-menu-col">
+                                    <h4>Nội dung Giới thiệu 3</h4>
+                                    <ul>
+                                      <li><Link to="/gioi-thieu" onClick={closeMenu}>Chi tiết 3A</Link></li>
+                                    </ul>
+                                  </div>
                                 </div>
-                              </div>
-                            )}
-                            {activeMegaTab === 2 && (
-                              <div className="mega-menu-grid">
-                                <div className="mega-menu-col">
-                                  <h4>Nội dung Giới thiệu 2</h4>
-                                  <ul>
-                                    <li><Link to="#">Chi tiết 2A</Link></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            )}
-                            {activeMegaTab === 3 && (
-                              <div className="mega-menu-grid">
-                                <div className="mega-menu-col">
-                                  <h4>Nội dung Giới thiệu 3</h4>
-                                  <ul>
-                                    <li><Link to="#">Chi tiết 3A</Link></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            )}
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
+
+                        {/* Mobile Submenu Accordion */}
+                        <div className={`mobile-submenu ${isMobileAboutOpen ? 'open' : ''}`}>
+                          <ul>
+                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 1</Link></li>
+                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 2</Link></li>
+                            <li><Link to="/gioi-thieu" onClick={closeMenu}>Giới thiệu 3</Link></li>
+                          </ul>
+                        </div>
+                      </>
                     )}
                   </li>
                 ))}
