@@ -29,7 +29,7 @@ function ProjectsSection() {
   return (
     <section className="projects-sectionA" ref={sectionRef}>
       <Container>
-        <div className={`projects-section-header${isVisible ? ' ps-header--visible' : ''}`}>
+        <div className={`projects-section-headera${isVisible ? ' ps-header--visible' : ''}`}>
           <h2 className="projects-section-title">DỰ ÁN NỔI BẬT</h2>
           <p className="projects-section-subtitle">
             Công nghiệp hóa, hiện đại hóa và mang sản phẩm hàng hóa, dịch vụ xuất xứ Việt Nam tiếp cận thị trường Mỹ

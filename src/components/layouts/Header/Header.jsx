@@ -166,10 +166,8 @@ function Header() {
                           </div>
                         </div>
 
-                        {/* Mobile Submenu Accordion */}
                         <div className={`mobile-submenu ${openMobileMenus.includes('aboutMain') ? 'open' : ''}`}>
                           <ul>
-                            {/* TAB 1 */}
                             <li className="mobile-submenu-item">
                               <div 
                                 className="mobile-submenu-link level-1" 
@@ -182,7 +180,7 @@ function Header() {
                               </div>
                               <div className={`mobile-sub-submenu ${openMobileMenus.includes('tab1') ? 'open' : ''}`}>
                                 <ul>
-                                  {/* Col 1 */}
+
                                   <li className="mobile-submenu-item">
                                     <div 
                                       className="mobile-submenu-link level-2" 
@@ -201,7 +199,7 @@ function Header() {
                                       </ul>
                                     </div>
                                   </li>
-                                  {/* Col 2 */}
+
                                   <li className="mobile-submenu-item">
                                     <div 
                                       className="mobile-submenu-link level-2" 
@@ -220,7 +218,7 @@ function Header() {
                                       </ul>
                                     </div>
                                   </li>
-                                  {/* Col 3 */}
+
                                   <li className="mobile-submenu-item">
                                     <div 
                                       className="mobile-submenu-link level-2" 
@@ -243,7 +241,6 @@ function Header() {
                               </div>
                             </li>
 
-                            {/* TAB 2 */}
                             <li className="mobile-submenu-item">
                               <div 
                                 className="mobile-submenu-link level-1" 
@@ -276,7 +273,6 @@ function Header() {
                               </div>
                             </li>
 
-                            {/* TAB 3 */}
                             <li className="mobile-submenu-item">
                               <div 
                                 className="mobile-submenu-link level-1" 

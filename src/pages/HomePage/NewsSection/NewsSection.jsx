@@ -8,7 +8,7 @@ function NewsSection() {
   return (
     <section className="news-sectionA">
       <Container>
-        <div className="news-section-header">
+        <div className="news-section-headera">
           <h2 className="news-section-title">TIN TỨC & SỰ KIỆN</h2>
           <p className="news-section-subtitle">
             Cập nhật những tin tức, sự kiện từ VUSTIC

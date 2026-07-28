@@ -374,10 +374,12 @@
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: #eef0f2;
+    padding-left: 10px;
   }
 
   .mobile-sub-submenu.open {
     max-height: 1000px;
+    padding-left: 10px;
   }
 
   .mobile-sub-submenu ul li a {
@@ -404,7 +406,7 @@
   }
   
   .menu-arrow.open {
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
   }
 }
 
