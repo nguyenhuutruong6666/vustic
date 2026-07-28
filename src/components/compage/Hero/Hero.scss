@@ -6,7 +6,7 @@
   align-items: center;
   background-color: var(--color-primary-dark);
   background-size: cover;
-  background-position: top center;
+  background-position: center 30%; /* Dịch lên 1 chút trên desktop để lấy trọng tâm */
   background-repeat: no-repeat;
   overflow: hidden;
   margin-top: 108px;
@@ -139,6 +139,7 @@
   .hero {
     min-height: 400px;
     margin-top: 88px;
+    background-position: top center;
 
     &--fullscreen {
       min-height: 600px;
@@ -151,11 +152,15 @@
 
   .hero-subtitle {
     font-size: 16px;
+    text-align: justify;
   }
 
   .hero-content {
-    /* Thanh đối tác trên mobile wrap 2 dòng nên cao ~110px */
-    padding-bottom: 120px;
+    padding-bottom: 55px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .hero-partners-inner {
@@ -175,6 +180,6 @@
   }
 
   .hero-content {
-    padding-bottom: 130px;
+    padding-bottom: 65px;
   }
 }
