@@ -75,9 +75,14 @@ function Hero({
         <div className="hero-content">
           <div ref={badgeRef} className="hero-badge" style={{ display: 'inline-block', animation: 'none' }}>{badge}</div>
           <h1 ref={titleRef} className="hero-title" style={{ animation: 'none', opacity: 1 }}>
-            {title && title.split('').map((char, index) => (
-              <span key={index} className="hero-char" style={{ display: 'inline-block', whiteSpace: 'pre' }}>
-                {char}
+            {title && title.split(' ').map((word, wordIndex, array) => (
+              <span key={wordIndex} style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+                {word.split('').map((char, charIndex) => (
+                  <span key={charIndex} className="hero-char" style={{ display: 'inline-block' }}>
+                    {char}
+                  </span>
+                ))}
+                {wordIndex < array.length - 1 && <span className="hero-space" style={{ display: 'inline-block' }}>&nbsp;</span>}
               </span>
             ))}
           </h1>
