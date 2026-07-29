@@ -9,6 +9,7 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMegaTab, setActiveMegaTab] = useState(1);
   const [openMobileMenus, setOpenMobileMenus] = useState([]);
+  const [activeHoverMenu, setActiveHoverMenu] = useState(null);
 
   const toggleMobileMenu = (key, e) => {
     if (e) e.preventDefault();
@@ -31,6 +32,12 @@ function Header() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setActiveHoverMenu(null);
+  };
+
+  const handleLogoClick = () => {
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -73,14 +80,19 @@ function Header() {
       <div className="header-main">
         <Container>
           <div className="header-container">
-            <Link to="/" className="header-logo" onClick={closeMenu}>
+            <Link to="/" className="header-logo" onClick={handleLogoClick}>
               <img src="/logo.png" alt="VUSTIC JSC" className="header-logo-img" />
             </Link>
 
             <nav className={`header-nav ${isMenuOpen ? 'header-nav-open' : ''}`}>
               <ul className="header-menu">
                 {menuItems.map((item) => (
-                  <li key={item.id} className="header-menu-item">
+                  <li 
+                    key={item.id} 
+                    className="header-menu-item"
+                    onMouseEnter={() => setActiveHoverMenu(item.id)}
+                    onMouseLeave={() => setActiveHoverMenu(null)}
+                  >
                     <NavLink
                       to={item.path}
                       className={({ isActive }) =>
@@ -104,7 +116,7 @@ function Header() {
                     </NavLink>
                     {item.label === 'Giới thiệu' && (
                       <>
-                        <div className="mega-menu">
+                        <div className={`mega-menu ${activeHoverMenu === item.id ? 'open' : ''}`}>
                           <div className="mega-menu-inner">
                             <div className="mega-menu-sidebar">
                               <ul>
